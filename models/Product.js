@@ -20,10 +20,14 @@ const ProductSchema = new Schema(
       type: Number,
       required: true
     },
-    previousPrice: {
+    discount: {
       type: Number
     },
-    categories: {
+    category: {
+      type: String,
+      required: true
+    },
+    subCategory: {
       type: String,
       required: true
     },
@@ -42,8 +46,10 @@ const ProductSchema = new Schema(
       type: String
     },
     sizes: {
-      type: String
-    },
+      height: Number,
+      width: Number,
+      depth: Number,
+    },    
     productUrl: {
       type: String
     },

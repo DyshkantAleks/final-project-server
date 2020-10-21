@@ -104,10 +104,9 @@ exports.placeOrder = async (req, res, next) => {
             res
           );
 
-          order.products.forEach(item => {
+          order.products.forEach(async item =>  {
             const id = item.product._id;
-            //удалил await. выдавал ошибку 110:14
-             Product.findOneAndUpdate({ _id: id }, { quantity: item.product.quantity - 1 }, { new: true })
+            await Product.findOneAndUpdate({ _id: id }, { quantity: item.product.quantity - 1 }, { new: true })
           })
 
           res.json({ order, mailResult });
