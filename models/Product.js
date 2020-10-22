@@ -16,6 +16,10 @@ const ProductSchema = new Schema(
       type: String,
       required: true
     },
+    route: {
+      type: String,
+      required: true
+    },
     currentPrice: {
       type: Number,
       required: true
