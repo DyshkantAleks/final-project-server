@@ -7,13 +7,29 @@ const SliderSchema = new Schema(
       type: String,
       required: true
     },
-    title: String,
-    imageUrl: {
+    route: {
+      type: String,
+      require: true
+    },
+    title: {
+      type: String
+    },
+    subTitle: {
+      type: String
+    },
+    sliderImageUrl: {
       type: String,
       required: true
     },
-    description: String,
-    htmlContent: String,
+    desctopSliderImageUrl: {
+      type: String,
+      required: true
+    },
+    fullDescription: {
+      type: String,
+      required: true
+    }, 
+         
     product: {
       type: Schema.Types.ObjectId,
       ref: "products"
