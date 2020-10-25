@@ -7,11 +7,28 @@ const CatalogSchema = new Schema(
       type: String,
       required: true
     },
-    name: {
+    route: {
+      type: String,
+      required: true
+    },
+    category: {
       type: String,
       required: true
     },
     parentId: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String     
+    },
+    icon: {
+      type: String     
+    },
+    image: {
+      type: String     
+    },
+    route: {
       type: String,
       required: true
     },
