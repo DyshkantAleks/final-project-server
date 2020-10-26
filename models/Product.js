@@ -3,7 +3,26 @@ const Schema = mongoose.Schema;
 
 const ProductSchema = new Schema(
   {
+    brand: {
+      type: String,
+      require: true
+    },
+    category: {
+      type: String,
+      required: true
+    },
+    color: {
+      type: String
+    },
     itemNo: {
+      type: String,
+      required: true
+    },
+    currentPrice: {
+      type: Number,
+      required: true
+    },
+    subCategory: {
       type: String,
       required: true
     },
@@ -20,54 +39,57 @@ const ProductSchema = new Schema(
       type: String,
       required: true
     },
-    currentPrice: {
-      type: Number,
-      required: true
-    },
     discount: {
       type: Number
     },
-    category: {
-      type: String,
-      required: true
-    },
-    subCategory: {
-      type: String,
-      required: true
-    },
-    imageUrls: [
-      {
-        type: String,
-        required: true
+    specifications: {
+      covering:{
+        type: String
+      },
+      casing: {
+        type: String
       }
-    ],
+    },
+    imageUrl: 
+       [ String],
+      required: true       
+    ,
     quantity: {
       type: Number,
       required: true,
       default: 0
     },
-    color: {
-      type: String
-    },
     sizes: {
-      height: Number,
-      width: Number,
-      depth: Number,
+      height: {
+        type:Number
+      },
+      width: {
+        type:Number
+      },
+      length:{
+        type:Number
+      },
     },    
-    productUrl: {
-      type: String
-    },
-    brand: {
-      type: String
-    },
     manufacturer: {
       type: String
+    },
+    isNewProduct: {
+      type: Boolean,
+      default: false
+    },
+    isTopRated: {
+      type: Boolean,
+      default: false
     },
     manufacturerCountry: {
       type: String
     },
     seller: {
       type: String
+    },
+    description: {
+      type: String,
+      require: true
     },
     date: {
       type: Date,
