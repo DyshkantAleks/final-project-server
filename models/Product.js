@@ -51,9 +51,7 @@ const ProductSchema = new Schema(
       }
     },
     imageUrl: 
-       [ String],
-      required: true       
-    ,
+       [ String],  
     quantity: {
       type: Number,
       required: true,
