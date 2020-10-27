@@ -22,6 +22,9 @@ const ProductSchema = new Schema(
       type: Number,
       required: true
     },
+    previousPrice: {
+      type: Number,
+     },
     subCategory: {
       type: String,
       required: true
@@ -76,6 +79,10 @@ const ProductSchema = new Schema(
       default: false
     },
     isTopRated: {
+      type: Boolean,
+      default: false
+    },
+     isSale: {
       type: Boolean,
       default: false
     },
