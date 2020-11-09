@@ -27,7 +27,6 @@ exports.addProduct = (req, res, next) => {
 
   try {
     productFields.name = productFields.name
-      .toLowerCase()
       .trim()
       .replace(/\s\s+/g, " ");
 
