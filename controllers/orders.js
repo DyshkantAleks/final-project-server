@@ -36,6 +36,8 @@ exports.placeOrder = async (req, res, next) => {
     }
 
     if (!req.body.products && cartProducts.length < 1) {
+      //add console.log
+      console.log(req.body.products, cartProducts.length)
       res
         .status(400)
         .json({ message: "The list of products is required, but absent!" });
